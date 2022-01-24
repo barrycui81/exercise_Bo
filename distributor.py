@@ -14,7 +14,6 @@ class Distributor:
                 self.producer.send(sub_topic["GET"], message)
                 self.producer.flush()
             if "PUT" in str(message):
-                print("sub_topic[put] : ", sub_topic["PUT"])
                 self.producer.send(sub_topic["PUT"], message)
                 self.producer.flush()
 
